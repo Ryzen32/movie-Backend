@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
 const MovieSchema = mongoose.Schema({
+  poster: { type: String },
+  screenshot: { type: String },
   title: { type: String },
   year: { type: String },
   language: { type: String },
