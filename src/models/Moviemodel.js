@@ -10,6 +10,8 @@ const MovieSchema = mongoose.Schema({
   p2: { type: String },
   p3: { type: String },
   p4: { type: String },
+  actors: { type: String },
+  link: { type: String },
 });
 
 const Movie = mongoose.model("movie", MovieSchema);

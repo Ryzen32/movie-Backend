@@ -11,4 +11,14 @@ movieRoute.get("/", async (req, res) => {
   }
 });
 
+movieRoute.post("/", async (req, res) => {
+  const data = req.body;
+  try {
+    let movies = await Movie.create(data);
+    res.send({ msg: "Movie posted", movies });
+  } catch (err) {
+    res.status(500).send({ msg: "failed !" });
+  }
+});
+
 module.exports = { movieRoute };
